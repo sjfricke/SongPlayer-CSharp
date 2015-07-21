@@ -1,0 +1,24 @@
+﻿<Window x:Class="SongReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="550" Width="1000">
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="371*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="FileUpload" Content="Load File" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="567" Height="53" Click="loadFile" FontSize="36"/>
+        <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Left" Margin="83.333,187,0,0" VerticalAlignment="Top" Width="118" Height="42" Click="Close" Grid.Column="1"/>
+        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="83.333,140,0,0" VerticalAlignment="Top" Width="118" Height="42" Click="Stop" Grid.Column="1"/>
+        <Button x:Name="PauseButton" Content="Pause" HorizontalAlignment="Left" Margin="83.333,93,0,0" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.23,0.209" Height="42" Click="Pause" Grid.Column="1"/>
+        <Button x:Name="playButton" Content="Play" Grid.Column="1" HorizontalAlignment="Left" Margin="83.333,46,0,0" VerticalAlignment="Top" Width="118" Height="42" Click="Play"/>
+        <Label x:Name="songTitle" Content="" HorizontalAlignment="Left" Height="51" Margin="10,105,0,0" VerticalAlignment="Top" Width="567" FontSize="24"/>
+        <Label x:Name="playStatus" Content="Status: Off" HorizontalAlignment="Left" Height="56" Margin="83.333,241,0,0" VerticalAlignment="Top" Width="118" Grid.Column="1" FontSize="16"/>
+        <Slider x:Name="volumeSlider" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="51.333,318,0,0" VerticalAlignment="Top" Width="178" Maximum="1" TickFrequency="-1" ValueChanged="volumeSlider_ValueChanged"/>
+        <Label x:Name="volumeLabel" Content="Volume: " Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="234.333,318,0,0" VerticalAlignment="Top" Width="162"/>
+        <ProgressBar x:Name="songProgress" HorizontalAlignment="Left" Height="23" Margin="10,161,0,0" VerticalAlignment="Top" Width="567" Foreground="#FF29EE4D"/>
+        <Label x:Name="songEndTime" Content="" HorizontalAlignment="Left" Margin="492,189,0,0" VerticalAlignment="Top" Width="85" Height="40"/>
+        <Label x:Name="songStartTime" Content="" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Width="83" Height="40"/>
+
+    </Grid>
+</Window>
